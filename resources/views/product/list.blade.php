@@ -43,7 +43,8 @@
               <div class="col-6 col-md-4 col-lg-4">
                 <div class="product product-7 text-center">
                   <figure class="product-media">
-                    <a href="{{ url(strval($value->slug)) }}" class="d-flex justify-content-center align-items-center ">
+                    <!-- <a href="{{ url(strval($value->slug)) }}" class="d-flex justify-content-center align-items-center "> -->
+                    <a href="{{ route('admin.show', ['id' => $value->id]) }}" class="d-flex justify-content-center align-items-center ">
                       @if(!empty($getProductImage) && !empty($getProductImage->getLogo()))
                       <img src="{{$getProductImage->getLogo()}}" alt="{{$value->title}}" class="product-image" style="width: 200px; height:200px; object-fit:cover;">
                       @endif
